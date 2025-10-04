@@ -73,7 +73,7 @@
         email: form.email.value
       };
 
-      fetch(https://script.google.com/macros/s/AKfycbwhDfSuqb4vmVDQjW43UJz4C3Uns4YYOZwyuNjZMhxocpa3Fp3be9nUfnVoxznt7Hnj/exec, 
+      fetch("https://script.google.com/macros/s/AKfycbxQbFPuqzXKj8U6x90suhm-ARlRbhBMGfq39oQb-Tg0FV54VTrbqTq3VkN1KzVapW9Q/exec", 
         method, "POST",
         body, JSON.stringify(data),
         headers, {
@@ -87,7 +87,9 @@
       })
       .catch(error => {
         alert("❌ Error: " + error.message);
-      });
+      }); 
+           
+    
                         
   </script>
 </body>
