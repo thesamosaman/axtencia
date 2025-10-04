@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact – Axtencia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Top Banner -->
+  <div class="top-banner" style="
+    background: url('Background-main.png') no-repeat center center;
+    background-size: cover;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 20px;
+  ">
+    <img src="Main-Logo-Axtencia.png" alt="Axtencia Logo" style="height: 80px;">
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#services">Our Services</a></li>
+          <li><a href="index.html#contact">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contact Form -->
+  <section>
+    <div class="container" style="max-width:600px; margin:auto; padding:40px 20px;">
+      <h1>Book a Consultation</h1>
+      
+      <form id="contactForm">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="company">Company Name</label>
+        <input type="text" id="company" name="company">
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required>
+
+        <button type="submit" class="btn">Submit</button>
+      </form>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2025 Axtencia.</p>
+    </div>
+  </footer>
+
+  <!-- Google Sheets Integration Script -->
+  <script>
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+
+      const data = {
+        name: form.name.value,
+        company: form.company.value,
+        email: form.email.value
+      };
+
+      fetch(https://script.google.com/macros/s/AKfycbwhDfSuqb4vmVDQjW43UJz4C3Uns4YYOZwyuNjZMhxocpa3Fp3be9nUfnVoxznt7Hnj/exec, 
+        method, "POST",
+        body, JSON.stringify(data),
+        headers, {
+          "Content-Type": "application/json"
+        }
+      })
+      .then(res => res.json())
+      .then(response => {
+        alert("✅ Thank you! Your submission has been saved.");
+        form.reset();
+      })
+      .catch(error => {
+        alert("❌ Error: " + error.message);
+      });
+                        
+  </script>
+</body>
+</html>
